@@ -37,13 +37,18 @@ Swap the persistence adapter from in-memory to PostgreSQL in [`app/dependencies.
 
 ## Quick Start
 
+**Prerequisites:** Python 3.9+
+
 ```bash
-pip install -e ../dat_service_lib
-pip install fastapi "uvicorn[standard]"
+git clone https://github.com/mdr391/dat_sensor_api.git
+cd dat_sensor_api
+
+pip install "git+https://github.com/mdr391/dat_service_lib.git"
+pip install "fastapi>=0.111.0" "uvicorn[standard]"
 
 uvicorn app.main:app --reload
-# API: http://localhost:8000
-# Docs: http://localhost:8000/docs
+# API:          http://localhost:8000
+# Interactive docs: http://localhost:8000/docs
 ```
 
 ## Example Usage
