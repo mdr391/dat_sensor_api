@@ -1,5 +1,7 @@
 # dat-sensor-api
 
+[![CI](https://github.com/mdr391/dat_sensor_api/actions/workflows/ci.yml/badge.svg)](https://github.com/mdr391/dat_sensor_api/actions/workflows/ci.yml)
+
 A thin FastAPI service that acts as the **HTTP inbound adapter** for [dat-service-lib](https://github.com/mdr391/dat_service_lib).
 
 This companion project demonstrates Hexagonal Architecture in practice: FastAPI is purely a delivery mechanism. All validation, anomaly detection, alerting, and metrics live in the domain layer — the API layer translates HTTP ↔ domain objects and nothing more.
