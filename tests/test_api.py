@@ -1,7 +1,7 @@
 import pytest
 from fastapi.testclient import TestClient
 from app.main import app
-from app.dependencies import get_service, get_threshold_repo
+from app.dependencies import get_service
 
 client = TestClient(app)
 
