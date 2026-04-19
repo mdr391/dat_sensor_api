@@ -2,9 +2,9 @@ name: CI
 
 on:
   push:
-    branches: [master]
+    branches: [main]
   pull_request:
-    branches: [master]
+    branches: [main]
 
 jobs:
   test:
@@ -24,10 +24,10 @@ jobs:
       - name: Install dependencies
         run: |
           pip install "git+https://github.com/mdr391/dat_service_lib.git"
-          pip install "fastapi>=0.111.0" "uvicorn[standard]" httpx
+          pip install "fastapi>=0.111.0" "uvicorn[standard]" httpx pytest
 
-      - name: Import check
-        run: python -c "from app.main import app; print('ok')"
+      - name: Run tests
+        run: pytest tests/ -v --tb=short
 
   lint:
     runs-on: ubuntu-latest
