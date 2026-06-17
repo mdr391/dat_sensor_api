@@ -85,3 +85,4 @@ dat_sensor_api/
 │       └── sensors.py   # Route handlers (HTTP ↔ domain translation only)
 └── requirements.txt
 ```
+Copyright © 2026 Zahidur Rahman
